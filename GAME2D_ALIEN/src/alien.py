@@ -1,5 +1,10 @@
+from pathlib import Path
+
 import pygame
 from pygame.sprite import Sprite
+
+
+IMAGE_PATH = Path(__file__).resolve().parent.parent / "images" / "alien.bmp"
 
 class Alien(Sprite):
     """Gerencia os alienígenas."""
@@ -11,7 +16,7 @@ class Alien(Sprite):
         self.settings = alien_invasion_settings
         
         # Carrega a imagem do alienígena e obtém seu rect
-        self.image = pygame.image.load('images/alien.bmp')
+        self.image = pygame.image.load(str(IMAGE_PATH))
         self.rect = self.image.get_rect()
         
         # Inicia cada novo alienígena próximo à parte superior esquerda da tela
