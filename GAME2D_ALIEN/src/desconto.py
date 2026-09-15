@@ -46,7 +46,7 @@ def aplicar_desconto(desconto: IDesconto, valor: float) -> float:
     return desconto.calcular(valor)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     valor = 100
 
     normal = DescontoNormal()
