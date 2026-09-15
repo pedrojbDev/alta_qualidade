@@ -2,7 +2,10 @@ from pathlib import Path
 
 import pygame
 from pygame.surface import Surface
-from settings import Settings
+try:
+    from src.settings import Settings
+except ModuleNotFoundError:
+    from settings import Settings
 
 IMAGE_PATH = Path(__file__).resolve().parent.parent / "images" / "ship.bmp"
 
